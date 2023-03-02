@@ -2,7 +2,6 @@ import random
 
 ### START ###
 
-should_continue = True
 print("Welcome in TIC TAC TOE Game \n")
 
 ###lists for save position ###
@@ -36,7 +35,7 @@ game_board = (f" {position[0]}|{position[1]}|{position[2]}\n"
               f" {position[6]}|{position[7]}|{position[8]}\n")
 print(game_board)
 
-while should_continue:
+while should_continue := True:
     ### PLAYER LOGIC ###
 
     player_move = input(f"Choose your position from {free_position}")
@@ -70,9 +69,9 @@ while should_continue:
                     if play_again == 'No':
                         should_continue = False
 
-        elif x[0] in player_position:
-            if x[1] in player_position:
-                if x[2] in player_position:
+        elif x[0] in cmp_position:
+            if x[1] in cmp_position:
+                if x[2] in cmp_position:
                     play_again = input("Computer win, wanna play again? Yes/No?").title()
                     if play_again == 'No':
                         should_continue = False
